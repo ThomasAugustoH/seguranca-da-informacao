@@ -18,3 +18,12 @@ Cada aluno deve cifrar uma imagem qualquer usando AES e disponibilizar o arquivo
 ### Questão 4
 
 Cada aluno deve assinar um arquivo qualquer e enviar o arquivo para seu colega. O outro aluno deve validar que o arquivo é autêntico.
+
+---
+
+# Instruções
+
+- Ativar o _.venv_;
+- Rodar no terminal: `pip install python-dotenv cryptography`;
+- Copiar o _.env.example_, renomear para _.env_ e substituir as variáveis de acordo com o contexto.
+- Rodar no terminal: `python3 Lista10/key_generation.py`
