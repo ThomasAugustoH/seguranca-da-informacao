@@ -95,7 +95,7 @@ if __name__ == '__main__':
     # send_message(MESSAGE, RECEIVER)
 
     # Teste de descriptografia
-    # plaintext = read_message(SENDER, RECEIVER)
+    # plaintext = read_message(RECEIVER, SENDER)
     # print(f'Mensagem recebida: {plaintext}')
 
     # Exercício 2

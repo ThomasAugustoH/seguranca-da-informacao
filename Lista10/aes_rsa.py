@@ -107,11 +107,11 @@ def receive_image(encrypted_image_path, encrypted_key_path, user, output_image):
     save_bytes(output_image, image_data)
 
 if __name__ == '__main__':
-    # send_image(f'./{MESSAGES_DIR}/rats.jpg', RECEIVER)
+    # send_image(f'./{MESSAGES_DIR}/imagem_legal.jpg', RECEIVER)
 
     # receive_image(
-    #     f'{MESSAGES_DIR}/{SENDER}_image.enc',
-    #     f'{MESSAGES_DIR}/{SENDER}_aes_key.enc',
-    #     RECEIVER,
-    #     f'{MESSAGES_DIR}/{SENDER}_recovered.jpg'
+    #     f'{MESSAGES_DIR}/{RECEIVER}_image.enc',
+    #     f'{MESSAGES_DIR}/{RECEIVER}_aes_key.enc',
+    #     SENDER,
+    #     f'{MESSAGES_DIR}/{RECEIVER}_recovered.jpg'
     #     )
