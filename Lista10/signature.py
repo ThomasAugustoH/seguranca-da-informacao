@@ -85,8 +85,12 @@ def send_signed_file(file_path, signer):
     if signature is None:
         return
 
-    signature_file = f"{MESSAGES_DIR}/{signer}_arquivo.bin"
+    signature_file = f"{MESSAGES_DIR}/{signer}_signature.sig"
     save_bytes(signature_file, signature)
+
+    with open(file_path, "rb") as f:
+        file_data = f.read()
+    save_bytes(f"{MESSAGES_DIR}/{signer}_signedfile.txt", file_data)
 
 
 def receive_and_verify_file(file_path, signature_path, signer):
@@ -100,5 +104,6 @@ if __name__ == "__main__":
     send_signed_file(f"./{MESSAGES_DIR}/arquivo.txt", SENDER)
 
     receive_and_verify_file(
-        f"./{MESSAGES_DIR}/arquivo.txt", f"{MESSAGES_DIR}/{SENDER}_arquivo.bin", SENDER
+        f"{MESSAGES_DIR}/{RECEIVER}_signedfile.txt", f"{MESSAGES_DIR}/{RECEIVER}_signature.sig", SENDER
     )
+
