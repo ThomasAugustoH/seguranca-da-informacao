@@ -1,3 +1,8 @@
 .venv
+.env
 .db
 __pycache__/
+
+# Lista 10
+*.pem
+!*_pub.pem
