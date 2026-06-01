@@ -101,9 +101,9 @@ def receive_and_verify_file(file_path, signature_path, signer):
 
 
 if __name__ == "__main__":
-    send_signed_file(f"./{MESSAGES_DIR}/arquivo.txt", SENDER)
+    send_signed_file(f"./{MESSAGES_DIR}/{SENDER}_unsigned.txt", SENDER)
 
     receive_and_verify_file(
-        f"{MESSAGES_DIR}/{RECEIVER}_signedfile.txt", f"{MESSAGES_DIR}/{RECEIVER}_signature.sig", SENDER
+        f"{MESSAGES_DIR}/{RECEIVER}_signedfile.txt", f"{MESSAGES_DIR}/{RECEIVER}_signature.sig", RECEIVER
     )
 
